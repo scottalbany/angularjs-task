@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code Exercise &raquo; AngularJS</title>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Page Style CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="afApp">
+    <div class="background"></div>
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-12">
+                <h1>Task Tracker</h1>
+                <p>v.2.0</p>
+            </div>
+        </div>
+        <div class="row content" ng-controller="afController">
+            <div class="col-md-6">
+                <h2>Create a Task</h2>
+                <form>
+                    <fieldset class="form-group">
+                        <label>Task Name</label>
+                        <input type="text" class="form-control" name="name" ng-model="name" id="taskName" >
+                        <label>Date</label>
+                        <input type="text" class="form-control" name="date" ng-model="date" id="taskDate" placeholder="MM/DD/YYYY" >
+                        <label>Assigned To</label>
+                        <input type="text" class="form-control" name="assigned" id="taskAssigned" ng-model="assigned" >
+                        <button id="addTask" type="submit" class="btn btn-secondary" ng-click="addTask()">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Existing Tasks</h2>
+                <div class="appData results">
+                    <div class="list" ng-repeat="y in newTask">
+                        <span class="name">{{ y.name }}</span>
+                        <span class="date">{{ y.date }}</span>
+                        <span class="assigned">{{ y.assigned }}</span>
+                    </div>
+                    <div class="list" ng-repeat="x in afData">
+                        <span class="name">{{ x.name }}</span>
+                        <span class="date">{{ x.date }}</span>
+                        <span class="assigned">{{ x.assigned }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AngularJS -->
+    <script src="assets/lib/angularjs/1.5.7/angular.min.js"></script>
+    <!-- Sanitize -->
+    <script src="assets/js/angular-sanitize.min.js"></script>
+    <!-- Controller -->
+    <script src="app/app.module.js"></script>
+    <!-- UI Bootstrap -->
+    <script src="assets/js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+</body>
+
+</html>
