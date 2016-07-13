@@ -86,5 +86,10 @@ form input[type=text] {
     float: right;
 }
 .results .list:nth-child(even) {
-    background: #DCDCDC
+    background: #DCDCDC;
 }
+ .submitted .ng-invalid {
+    border: 1px solid red;
+    background: rgb(255, 206, 206);
+}
+       

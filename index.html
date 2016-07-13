@@ -24,15 +24,15 @@
         <div class="row content" ng-controller="afController">
             <div class="col-md-6">
                 <h2>Create a Task</h2>
-                <form>
+                <form ng-class="{'submitted': submitted}" ng-submit="addTask()" >
                     <fieldset class="form-group">
                         <label>Task Name</label>
-                        <input type="text" class="form-control" name="name" ng-model="name" id="taskName" >
+                        <input type="text" class="form-control" name="name" ng-model="name" id="taskName" required >
                         <label>Date</label>
-                        <input type="text" class="form-control" name="date" ng-model="date" id="taskDate" placeholder="MM/DD/YYYY" >
+                        <input type="text" class="form-control" name="date" ng-model="date" id="taskDate" placeholder="MM/DD/YYYY" required >
                         <label>Assigned To</label>
-                        <input type="text" class="form-control" name="assigned" id="taskAssigned" ng-model="assigned" >
-                        <button id="addTask" type="submit" class="btn btn-secondary" ng-click="addTask()">Submit</button>
+                        <input type="text" class="form-control" name="assigned" id="taskAssigned" ng-model="assigned" required >
+                        <button id="addTask" type="submit" class="btn btn-secondary" ng-click="submitted= true;">Submit</button>
                     </fieldset>
                 </form>
             </div>
