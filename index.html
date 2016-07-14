@@ -32,6 +32,7 @@
                         <input type="text" class="form-control" ng-class="{ 'has-error' : afTask.date.$invalid && !afTask.date.$pristine }" name="date" ng-model="date" id="taskDate" placeholder="MM/DD/YYYY" required>
                         <label>Assigned To</label>
                         <input type="text" class="form-control" ng-class="{ 'has-error' : afTask.assigned.$invalid && !afTask.assigned.$pristine }" name="assigned" id="taskAssigned" ng-model="assigned" required>
+                        <!-- Submit will remain disabled until required fields are entered -->
                         <button id="addTask" type="submit" class="btn btn-secondary" ng-disabled="afTask.$invalid">Submit</button>
                     </fieldset>
                 </form>
