@@ -13,33 +13,32 @@ afApp.controller('afController', function($scope, $window, $http) {
             "date":"07/11/2016",
             "assigned":"John Doe"
         },
-        {  
+        {
             "name":"Test Task #3",
             "date":"07/11/2016",
             "assigned":"John Doe"
         },
-        {  
+        {
             "name":"Test Task #4",
             "date":"07/11/2016",
             "assigned":"John Doe"
         },
-        {  
+        {
             "name":"Test Task #5",
             "date":"07/11/2016",
             "assigned":"John Doe"
         },
-        {  
+        {
             "name":"Test Task #6",
             "date":"07/11/2016",
             "assigned":"John Doe"
         },
-        {  
+        {
             "name":"Test Task #7",
             "date":"07/11/2016",
-          "assigned":"John Doe"
+            "assigned":"John Doe"
         }
     ];
-
     $scope.newTask = [];
     $scope.addTask = function() {
         $scope.newTask.push({

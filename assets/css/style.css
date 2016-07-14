@@ -90,6 +90,9 @@ form input[type=text] {
 }
  .submitted .ng-invalid {
     border: 1px solid red;
-    background: rgb(255, 206, 206);
+    background: #FFCECE;
+}
+.submitted .ng-invalid:not(:focus) {
+    background-color: #FA787E;
 }
        
